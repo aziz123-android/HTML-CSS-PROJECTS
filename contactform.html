@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+        integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .contact {
+            position: relative;
+            min-height: 100vh;
+            padding: 50px 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Video background styling */
+        .contact video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+             /* Optional: Adjust video transparency */
+        }
+
+        .contact .content {
+            max-width: 800px;
+            text-align: center;
+            z-index: 1;
+            color: white;
+        }
+
+        .contact .content h2 {
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        .contact .content p {
+            font-weight: 300;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        .container .contactInfo {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            color: black;
+        }
+
+        .container .contactInfo .box {
+            position: relative;
+            padding: 20px 0;
+            display: flex;
+        }
+
+        .container .contactInfo .box .icon {
+            min-width: 60px;
+            height: 60px;
+            background:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 22px;
+        }
+        .container .contactInfo .box .icon:hover{
+            background-color: black;
+            color: white;
+        }
+
+        .container .contactInfo .box .text {
+            display: flex;
+            margin-left: 20px;
+            font-size: 16px;
+            flex-direction: column;
+            font-weight: 300;
+        }
+
+        .container .contactInfo .box .text h3 {
+            font-weight: 550;
+            color: white;
+        }
+
+        .contactForm {
+            width: 40%;
+            padding: 40px;
+            border-radius: 10px;
+        
+        }
+
+        .contactForm h2 {
+            font-size: 30px;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .contactForm .inputbox {
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .contactForm .inputbox input,
+        .contactForm .inputbox textarea {
+            width: 100%;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 2px solid #fff;
+            outline: none;
+            resize: none;
+            color: white;
+            background: transparent;
+        }
+
+        .contactForm .inputbox span {
+            position: absolute;
+            left: 0;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            pointer-events: none;
+            transition: 0.5s;
+            color: white;
+        }
+
+        .contactForm .inputbox input:focus~span,
+        .contactForm .inputbox input:valid~span,
+        .contactForm .inputbox textarea:focus~span,
+        .contactForm .inputbox textarea:valid~span {
+            color: #e91e63;
+            font-size: 12px;
+            transform: translateY(-20px);
+        }
+
+        .contactForm .inputbox input[type="submit"] {
+            width: 100px;
+            background: #00bcd4;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 991px) {
+            .contact {
+                padding: 50px;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            .container .contactInfo {
+                margin-bottom: 40px;
+            }
+
+            .container .contactInfo,
+            .contactForm {
+                width: 100%;
+            }
+        }
+        .para{
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="contact">
+        <!-- Video background -->
+        <video autoplay muted loop>
+            <source src="1.mp4" type="video/mp4">
+        </video>
+
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita accusantium dolores porro vel totam
+                officiis impedit dolorem eveniet, ab nostrum vero aperiam error deserunt, sapiente reprehenderit enim.
+                Optio, a quo?</p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p class="para">A-1 block 13 <br>ABC Town <br>ABC Apartment <br> Karachi</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p class="para">0333-1234567</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p class="para">abc_123@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form action="">
+                    <h2>Send Message</h2>
+                    <div class="inputbox">
+                        <input type="text" name="" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputbox">
+                        <textarea required="required"></textarea>
+                        <span>Type Your Message...</span>
+                    </div>
+                    <div class="inputbox">
+                        <center><input type="submit" name="" value="Send" class="submit"></center>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
